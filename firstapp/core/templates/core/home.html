@@ -1,0 +1,50 @@
+{% extends 'core/main.html' %}
+
+{% block content %}
+<section>
+  <div class="container">
+    <div class="col12">
+      <div class="row">
+        <h1 class="display-5">Актуальные заметки ({{n_notes}})</h1>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+      <div class="col12">
+        {% if not notes %}
+        <span class="badge bg-danger col-12" style="text-align: left">Здесь пока пусто</span>
+        {% endif %}
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+          {% for note in notes %}
+          <div class="col mb-4">
+            <div class="card h-100 text-white bg-{{note.color_id.name}}">
+              <div class="card-body">
+                <h4 class="card-title">{{note.title}}</h4>
+                <p class="card-text">
+                  <small>
+                    {{ note.description|truncatechars:60}}
+                  </small>
+                </p>
+              </div>
+              <div class="card-footer">
+                 <p class="card-text">
+                  Завершить до {{note.time_do}}
+                 </p>
+                <form method="post">
+                  {% csrf_token %}
+                  <input type="hidden" name="note" value="{{note.id}}">
+                  <input type="submit" value="Выполнено" class="btn btn-outline-light col-12">
+                </form>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+
+        </div>
+      </div>
+  </div>
+</section>
+{% endblock %}

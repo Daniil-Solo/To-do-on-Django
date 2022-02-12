@@ -1,0 +1,42 @@
+{% extends 'core/main.html' %}
+
+{% block content %}
+<section>
+  <div class="container">
+    <div class="col12">
+      <div class="row">
+        <h1 class="display-5">Новая заметка</h1>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+      <div class="col12">
+        <form method="post">
+          {% csrf_token %}
+
+          {% if form.non_field_errors %}
+          <span class="badge bg-danger col-12" style="text-align: left">{{form.non_field_errors}}</span>
+          {% endif %}
+
+
+          {% for f in form %}
+          <div class="input-group mb-3">
+            <span class="input-group-text">{{f.label}}</span>
+            {{f}}
+          <div class="input-group mb-3">
+            {% for error in f.errors %}
+               <span class="badge bg-danger col-12" style="text-align: left">{{error}}</span>
+            {% endfor %}
+          </div>
+          {% endfor %}
+
+          <div class="input-group">
+            <input type="submit" value="Сохранить" class="btn btn-outline-primary">
+          </div>
+        </form>
+      </div>
+  </div>
+</section>
+{% endblock %}

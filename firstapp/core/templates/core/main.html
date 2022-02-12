@@ -1,0 +1,41 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block main %}
+<section>
+  <div class="container">
+    <div class="row">
+      <nav class="navbar">
+        <div class="col12">
+          <a class="navbar-brand" href="{% url 'home' %}">
+            <img src="{%static 'core/img/icon.ico' %}" width="30" height="30" class="d-inline-block align-top" alt="Логотип">
+            Заметки
+          </a>
+        </div>
+        <div class="col12">
+          <ul class="nav">
+            <li class="nav-item">
+              <a type="button" class="btn btn-outline-primary" style="border-width: 0" href="{% url 'home' %}">Главная</a>
+            </li>
+            <li class="nav-item">
+              <a type="button" class="btn btn-outline-primary" style="border-width: 0" href="{% url 'new_note' %}">Создать заметку</a>
+            </li>
+            <li class="nav-item">
+              <a type="button" class="btn btn-outline-primary" style="border-width: 0" href="{% url 'archive' %}">Архив</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+</section>
+
+
+{% block content %}
+{% endblock content %}
+
+<footer class="section-fgm">
+
+</footer>
+{% endblock %}
+
