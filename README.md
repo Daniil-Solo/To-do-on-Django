@@ -14,10 +14,10 @@
 * Хранение всех заметок  
 
 ### Доступные страницы (картинки)
-1. [Главная страница](https://www.google.com)
-2. [Создание страницы](https://www.google.com)
-3. [Архив заметок](https://www.google.com)
-4. [Админ-панель](https://www.google.com)
+1. [Главная страница](https://github.com/Daniil-Solo/To-do-on-Django/blob/master/images/screen_1.jpg)
+2. [Создание страницы](https://github.com/Daniil-Solo/To-do-on-Django/blob/master/images/screen_2.jpg)
+3. [Архив заметок](https://github.com/Daniil-Solo/To-do-on-Django/blob/master/images/screen_3.jpg)
+4. [Админ-панель](https://github.com/Daniil-Solo/To-do-on-Django/blob/master/images/screen_4.jpg)
 
 ## Запуск
 ### Как запустить по шагам
