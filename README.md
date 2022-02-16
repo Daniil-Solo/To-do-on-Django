@@ -31,7 +31,7 @@ cd To-do-on-Django
 ```
 Создаем и активируем виртуальное окружение
 ```bash
-python -m venv .venv
+python -m venv venv
 venv\Scripts\activate
 ```
 Устанавливаем необходимые библиотеки
@@ -52,7 +52,7 @@ python manage.py runserver
 ```bash
 git clone https://github.com/Daniil-Solo/To-do-on-Django
 cd To-do-on-Django
-python -m venv .venv
+python -m venv venv
 venv\Scripts\activate
 pip install -r requirements.txt
 cd firstapp
